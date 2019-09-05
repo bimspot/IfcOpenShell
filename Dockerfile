@@ -21,5 +21,5 @@ RUN apt-get update -y && \
   libfreetype6-dev
 
 RUN git clone -b v0.6.0 https://github.com/IfcOpenShell/IfcOpenShell.git
-WORKDIR /tmp/IfcOpenShell/nix
+WORKDIR /IfcOpenShell/nix
 RUN python build-all.py
