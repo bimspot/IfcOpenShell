@@ -8,7 +8,7 @@ matrix:
 jobs:
   include:
     - stage: build
-      script: ./scripts/build.sh
+      script: travis_wait 60 ./scripts/build.sh
 
 # language: cpp
 # compiler: gcc
