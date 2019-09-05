@@ -1,14 +1,16 @@
-matrix:
-  include:
-    - os: linux
-      dist: bionic
-    - os: osx
-      osx_image: xcode11
+# matrix:
+#   include:
+#     - os: linux
+#       dist: bionic
+#     - os: osx
+#       osx_image: xcode11
+
+dist: bionic
 
 jobs:
   include:
     - stage: build
-      script: travis_wait 60 ./scripts/build.sh
+      script: travis_wait 60 docker build -t ifcopenshell .
 
 # language: cpp
 # compiler: gcc

@@ -1,7 +1,7 @@
 FROM  ubuntu:18.04 as builder
 
 RUN apt-get -qq update -y && \
-  apt-get -qq install -y \
+  apt-get install -y \
   autoconf \
   bison \
   flex \
