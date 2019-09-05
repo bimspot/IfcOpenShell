@@ -1,10 +1,14 @@
-dist: bionic
+matrix:
+  include:
+    - os: linux
+      dist: bionic
+    - os: osx
+      osx_image: xcode11
 
 jobs:
   include:
-    - stage: build docker image
-      script:
-        - docker build -t ifcopenshell .
+    - stage: build
+      script: ./scripts/build.sh
 
 # language: cpp
 # compiler: gcc

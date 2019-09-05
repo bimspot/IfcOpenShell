@@ -1,7 +1,7 @@
 FROM  ubuntu:18.04 as builder
 
-RUN apt-get update -y && \
-  apt-get install -y \
+RUN apt-get -qq update -y && \
+  apt-get -qq install -y \
   autoconf \
   bison \
   flex \
@@ -20,6 +20,7 @@ RUN apt-get update -y && \
   libffi-dev \
   libfreetype6-dev
 
-RUN git clone -b v0.6.0 https://github.com/IfcOpenShell/IfcOpenShell.git
-WORKDIR /IfcOpenShell/nix
+
+COPY . /IfcOpenShell
+WORKDIR /IfcOpenShell
 RUN python build-all.py
