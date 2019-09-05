@@ -22,5 +22,5 @@ RUN apt-get -qq update -y && \
 
 
 COPY . /IfcOpenShell
-WORKDIR /IfcOpenShell
+WORKDIR /IfcOpenShell/nix
 RUN python build-all.py
