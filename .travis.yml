@@ -10,7 +10,8 @@ dist: bionic
 jobs:
   include:
     - stage: build
-      script: travis_wait 60 docker build -t ifcopenshell .
+      script:
+        - travis_wait 60 docker build -t ifcopenshell .
 
 # language: cpp
 # compiler: gcc
