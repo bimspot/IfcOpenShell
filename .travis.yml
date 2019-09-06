@@ -1,3 +1,10 @@
+
+services:
+  - docker
+
+before_install:
+  - docker build -t ifcopenshell .
+
 # matrix:
 #   include:
 #     - os: linux
@@ -5,13 +12,13 @@
 #     - os: osx
 #       osx_image: xcode11
 
-dist: bionic
+# dist: bionic
 
-jobs:
-  include:
-    - stage: build
-      script:
-        - travis_wait 60 docker build -t ifcopenshell .
+# jobs:
+#   include:
+#     - stage: build
+#       script:
+#         - travis_wait 60 docker build -t ifcopenshell .
 
 # language: cpp
 # compiler: gcc
