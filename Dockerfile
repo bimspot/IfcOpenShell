@@ -18,7 +18,8 @@ RUN apt-get -qq update -y && \
   python-all-dev \
   swig \
   libffi-dev \
-  libfreetype6-dev
+  libfreetype6-dev \
+  libx11-dev
 
 
 COPY . /IfcOpenShell
