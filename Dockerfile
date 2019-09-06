@@ -19,7 +19,8 @@ RUN apt-get -qq update -y && \
   swig \
   libffi-dev \
   libfreetype6-dev \
-  libx11-dev
+  libx11-dev \
+  mesa-common-dev
 
 
 COPY . /IfcOpenShell
